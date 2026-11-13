@@ -1,0 +1,48 @@
+name: Pytest 自动化测试
+
+# 1. 触发条件
+on:
+  push:                     # 当有代码被 push 时触发
+    branches: [ "main" ]    # 仅限 main 分支
+  pull_request:             # 当有 Pull Request 时触发
+    branches: [ "main" ]
+  workflow_dispatch:        # 👉 加上这一行！允许在网页上手动点击执行
+  schedule:
+    - cron: '0 10 */2 * *'   # 定时任务：每2天的UTC时间02:00执行 (北京时间10:00)
+
+# 2. 定义任务
+jobs:
+  test:
+    runs-on: ubuntu-latest  # 指定运行环境为最新的 Ubuntu 虚拟机
+
+    steps:
+    # 步骤1：检出代码
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    # 步骤2：设置 Python 环境
+    - name: 设置 Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12' # 指定 Python 版本，可根据你的本地环境调整
+
+    # 步骤3：安装项目依赖
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pytest pytest-html # 安装测试所需的库
+
+    # 步骤4：运行 Pytest 并生成 HTML 报告
+    - name: 运行测试
+      run: |
+        cd api_test_project    # 切换到你的测试脚本所在目录
+        pytest test_api.py --html=report.html --self-contained-html
+
+    # 步骤5：上传测试报告
+    - name: 上传测试报告
+      uses: actions/upload-artifact@v4
+      if: always() # 即使测试失败也上传报告，方便排查
+      with:
+        name: pytest-html-report
+        path: api_test_project/report.html
+        retention-days: 30 # 报告在 GitHub 上保留 30 天
