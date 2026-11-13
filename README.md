@@ -6,7 +6,7 @@
 ```text
 web-api-test-demo/
 ├── README.md 
-├── Swag Labs 电商实验网站项目测试/ # UI 功能测试实战项目
+├── SwagLabs 电商实验网站项目测试/ # UI 功能测试实战项目
 │   ├── 项目测试用例表.xlsx     # 全量测试资产汇总 (包含：项目说明、测试用例、Bug缺陷、体验优化四张表)
 │   ├── 测试用例表.csv          # 专为 GitHub 预览拆分的用例表
 │   ├── bug缺陷.csv             # 专为 GitHub 预览拆分的缺陷记录
@@ -21,7 +21,7 @@ web-api-test-demo/
     └── readme_images/         # 供 README 展示用的截图
         ├── code_screenshot.png    # 自动化代码截图
         └── report_screenshot.png  # 测试报告截图
-
+```
 🛒 模块一：UI 功能测试 (UI Test)
 
     测试对象：Swag Labs 电商演示网站
@@ -41,19 +41,19 @@ web-api-test-demo/
 (注：为了提供更好的在线预览体验，以下数据已从原 Excel 中提取并转换为 GitHub 原生支持的 CSV 格式。
 但内容和格式完整的表格，请下载完整表格”项目测试用例表.xlsx “    内含：项目说明、测试用例、Bug缺陷、体验优化四张表)
 
-    👉 [测试用例清单 (测试用例表.csv)](./Swag Labs 电商实验网站项目测试/测试用例表.csv) - 涵盖正向流程、异常边界与权限校验。
+    👉 [测试用例清单 (测试用例表.csv)](./SwagLabs电商实验网站项目测试/测试用例表.csv) - 涵盖正向流程、异常边界与权限校验。
 
-    👉 [**Bug 缺陷汇总 (bug缺陷.csv)](./Swag Labs 电商实验网站项目测试/bug缺陷.csv) - 记录测试执行中发现的严重及一般缺陷。
+    👉 [**Bug 缺陷汇总 (bug缺陷.csv)](./SwagLabs电商实验网站项目测试/bug缺陷.csv) - 记录测试执行中发现的严重及一般缺陷。
 
-    👉 [**体验优化建议 (体验优化.csv)](./Swag Labs 电商实验网站项目测试/体验优化.csv) - 基于用户视角的 UI/UX 改进建议。
+    👉 [**体验优化建议 (体验优化.csv)](./SwagLabs电商实验网站项目测试/体验优化.csv) - 基于用户视角的 UI/UX 改进建议。
 
 🐛 缺陷截图演示 (Bug Screenshot)
 
-![Bug截图示例](./Swag Labs 电商实验网站项目测试/bug截图/bug-002_所有img的src指向同一占位图.png)
-![Bug截图示例](./Swag Labs 电商实验网站项目测试/bug截图/BUG-003_js脚本设置下拉lohi值触发事件_依然没有触发排序.png)
-![Bug截图示例](./Swag Labs 电商实验网站项目测试/bug截图/BUG-006_f12查看器发现没有转义.png)
+![Bug截图示例](./SwagLabs电商实验网站项目测试/bug截图/bug-002_所有img的src指向同一占位图.png)
+![Bug截图示例](./SwagLabs电商实验网站项目测试/bug截图/BUG-003_js脚本设置下拉lohi值触发事件_依然没有触发排序.png)
+![Bug截图示例](./SwagLabs电商实验网站项目测试/bug截图/BUG-006_f12查看器发现没有转义.png)
 
-    注：更多详细缺陷截图请查看 Swag Labs 电商实验网站项目测试/bug截图 文件夹。
+    注：更多详细缺陷截图请查看 SwagLabs电商实验网站项目测试/bug截图 文件夹。
 
 🚀 模块二：接口自动化测试 (API Test)
 
