@@ -1,26 +1,33 @@
 # Web & API 自动化测试实战演示 (Web & API Test Demo)
 
-本项目用于展示个人在软件测试领域的实战能力，包含 **功能测试** 与 **接口自动化测试** 两个核心模块，涵盖了从用例设计、缺陷管理到自动化脚本编写及报告生成的完整闭环。
+本项目用于展示个人在软件测试领域的实战能力，包含 **功能测试** ， **接口自动化测试** 以及 **JMeter 接口与性能测试学习笔记**三个核心模块，前两个涵盖了从用例设计、缺陷管理到自动化脚本编写及报告生成的完整闭环。
 
-## 📁 目录结构
+## 📁 仓库目录结构
+
 ```text
 web-api-test-demo/
-├── README.md 
-├── SwagLabs电商实验网站项目测试/ # UI 功能测试实战项目
-│   ├── 项目测试用例表.xlsx     # 全量测试资产汇总 (包含：项目说明、测试用例、Bug缺陷、体验优化四张表)
-│   ├── 测试用例表.csv          # 专为 GitHub 预览拆分的用例表
-│   ├── bug缺陷.csv             # 专为 GitHub 预览拆分的缺陷记录
-│   ├── 体验优化.csv            # 专为 GitHub 预览拆分的优化建议
-│   └── bug截图/               # 执行测试过程中发现的bug缺陷截图
-│                              # 命名示例："BUG-001_购物车为空_可正常结算下单.png"
+├── README.md                         # 仓库说明文件
 │
-└── api_test_project/          # 接口自动化测试项目
-    ├── test_api.py            # Pytest 自动化测试脚本
-    ├── report.html            # HTML 测试报告 (下载后可浏览器打开)
-    ├── assets/                # 报告所需的静态资源文件
-    └── readme_images/         # 供 README 展示用的截图
-        ├── code_screenshot.png    # 自动化代码截图
-        └── report_screenshot.png  # 测试报告截图
+├── SwagLabs电商实验网站项目测试/      # UI 功能测试实战项目
+│   ├── 项目测试用例表.xlsx           # 全量测试资产汇总 (含项目说明、用例、Bug、优化建议)
+│   ├── 测试用例表.csv                # 专为 GitHub 预览拆分的用例表
+│   ├── bug缺陷.csv                   # 专为 GitHub 预览拆分的缺陷记录
+│   ├── 体验优化.csv                  # 专为 GitHub 预览拆分的优化建议
+│   └── bug截图/                      # 执行测试过程中发现的 bug 截图
+│                                     # 命名示例："BUG-001_购物车为空_可正常结算下单.png"
+│
+├── api_test_project/                 # 接口自动化测试项目 (Python + Pytest)
+│   ├── test_api.py                   # Pytest 自动化测试脚本
+│   ├── report.html                   # HTML 测试报告 (下载后可浏览器打开)
+│   ├── assets/                       # 报告所需的静态资源文件
+│   └── readme_images/                # 供 README 展示用的截图
+│       ├── code_screenshot.png       # 自动化代码截图
+│       └── report_screenshot.png     # 测试报告截图
+│
+└── jmeter_test/                      # JMeter 接口与性能测试学习笔记 (新增)
+    ├── jmeter_note.md                # 核心学习笔记 (组件作用域、关联、断言等)
+    ├── images/                       # 笔记中引用的窗口截图图片
+    └── jmeter训练截图/               # 实操界面截图记录
 ```
 
 ## 🛒 模块一：UI 功能测试 (UI Test)
