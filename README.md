@@ -17,6 +17,14 @@ web-api-test-demo/
 │                                     # 命名示例："BUG-001_购物车为空_可正常结算下单.png"
 │
 ├── api_test_project/                 # 接口自动化测试项目 (Python + Pytest)
+│   ├── api_test_ReqRes/
+│   │     ├── conftest.py          # 公共配置：fixture夹具、基础地址、登录Token、请求会话
+│   │     ├── api/                 # 接口封装层：把所有接口的请求逻辑封装成方法
+│   │     │   └── reqres_api.py
+│   │     └── testcases/           # 测试用例层：只写测试步骤+断言，不写重复请求代码
+│   │          ├── test_login.py    # 登录接口测试用例
+│   │          └── test_user_crud.py# 用户增删改查测试用例（依赖登录Token）
+│   │     
 │   ├── test_api.py                   # Pytest 自动化测试脚本
 │   ├── report.html                   # HTML 测试报告 (下载后可浏览器打开)
 │   ├── assets/                       # 报告所需的静态资源文件
