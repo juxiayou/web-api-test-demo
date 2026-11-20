@@ -98,7 +98,7 @@ cd api_test_project/api_test_ReqRes
 pytest testcases/ --html=report.html --self-contained-html
 ```
 
-> 说明：ReqRes 是境外公开练习服务，国内网络时不时连不上，或者返回的不是 JSON（直接报 `JSONDecodeError`）。这是网络层面的问题，不是脚本问题；把 `base_url` 换成自己能访问的服务，整套框架可以原样复用。
+> 说明：ReqRes 是境外公开练习服务，国内网络时不时连不上，或者返回的不是 JSON（直接报 `JSONDecodeError`）。这是网络层面的问题，不是脚本问题；把 `base_url` 换成能访问的服务，整套框架可以原样复用。
 
 ### 2.2 一言 API 基础练习
 
